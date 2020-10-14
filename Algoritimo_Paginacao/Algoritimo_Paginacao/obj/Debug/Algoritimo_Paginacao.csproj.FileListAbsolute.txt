@@ -1,0 +1,7 @@
+C:\Users\Luiz\Desktop\ProgramasVS\Algoritimo_Paginacao\Algoritimo_Paginacao\bin\Debug\Algoritimo_Paginacao.exe.config
+C:\Users\Luiz\Desktop\ProgramasVS\Algoritimo_Paginacao\Algoritimo_Paginacao\bin\Debug\Algoritimo_Paginacao.exe
+C:\Users\Luiz\Desktop\ProgramasVS\Algoritimo_Paginacao\Algoritimo_Paginacao\bin\Debug\Algoritimo_Paginacao.pdb
+C:\Users\Luiz\Desktop\ProgramasVS\Algoritimo_Paginacao\Algoritimo_Paginacao\obj\Debug\Algoritimo_Paginacao.csprojAssemblyReference.cache
+C:\Users\Luiz\Desktop\ProgramasVS\Algoritimo_Paginacao\Algoritimo_Paginacao\obj\Debug\Algoritimo_Paginacao.csproj.CoreCompileInputs.cache
+C:\Users\Luiz\Desktop\ProgramasVS\Algoritimo_Paginacao\Algoritimo_Paginacao\obj\Debug\Algoritimo_Paginacao.exe
+C:\Users\Luiz\Desktop\ProgramasVS\Algoritimo_Paginacao\Algoritimo_Paginacao\obj\Debug\Algoritimo_Paginacao.pdb
