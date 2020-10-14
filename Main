@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Algoritimo_Paginacao
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaração das variaveis
+            int NumPag, Hit, Numeros;
+            // Inicio do Código        
+            Queue<int> Paginas = new Queue<int>();
+            Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("Seja bem vindo ao simulador de páginação!");
+            Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            // Declarando a quantidade de números a serem inseridos;
+            Console.WriteLine("Qual a quantidade de números para serem inseridos?");
+            Numeros = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"A quantidade de números que irão ser inseridos são de {Numeros}!");
+            Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            // Declarando um número especifico de páginas;
+            Console.WriteLine("Quantos números de páginas da RAM você deseja realizar o teste?");
+            NumPag = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"O números de páginas que irão ser inseridas foi de {NumPag}!");
+            Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("Insira os Números que deseja para realizar a simulação...");
+            Paginas.Enqueue(Convert.ToInt32(Console.ReadLine()));
+            int Miss = 1;
+            // Laço para contagem
+            for (int cont = 0; cont < (Numeros - 1); cont++)
+            {
+                Console.WriteLine("Insira os outros números...");
+                Hit = int.Parse(Console.ReadLine());
+                if (Paginas.Count < NumPag)
+                {
+                    Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                    Paginas.Enqueue(Hit);
+                    Console.WriteLine("Miss!");
+                    Miss += 1;
+                }
+                else if ((Paginas.Count >= NumPag) && (Paginas.Contains(Hit)))
+                {
+                    Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                    Console.WriteLine("Hit!");
+                }
+                else if ((Paginas.Count >= NumPag) && (!Paginas.Contains(Hit)))
+                {
+                    Paginas.Dequeue();
+                    Paginas.Enqueue(Hit);
+                    Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                    Miss += 1;
+                    Console.WriteLine("Miss!");
+                    Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+                    Console.WriteLine($"O número  de Miss foi de {Miss}!");
+                }
+            }
+            // Output
+            Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            int[] FIlaFinal = Paginas.ToArray();
+            Console.WriteLine("Os números que ficaram na página foram...");
+            for (int j = 0; j < NumPag; j++)
+            {
+                Console.Write(" " + FIlaFinal[j]);
+            }
+            System.Console.ReadKey();
+        }
+    }
+}
